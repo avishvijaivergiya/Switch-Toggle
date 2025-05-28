@@ -3,15 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Switch Toggle</title>
+    <title>Switch Toggle Variants</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="switch-container">
-        <span class="switch-label">Label</span>
-        <div class="switch">
-            <div class="switch-handle"></div>
-        </div>
+    <div class="demo-container">
+        <table class="switch-table">
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Charcoal</th>
+                    <th>Blue</th>
+                    <th>Teal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Off</td>
+                    <td>
+                        <div class="switch">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="switch blue">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="switch teal">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>On</td>
+                    <td>
+                        <div class="switch active">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="switch blue active">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="switch teal active">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Disabled Off</td>
+                    <td>
+                        <div class="switch disabled">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="switch blue disabled">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="switch teal disabled">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Disabled On</td>
+                    <td>
+                        <div class="switch active disabled">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="switch blue active disabled">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="switch teal active disabled">
+                            <div class="switch-handle"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <script src="script.js"></script>

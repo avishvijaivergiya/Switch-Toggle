@@ -1,5 +1,7 @@
-const switchToggle = document.querySelector('.switch');
-
-switchToggle.addEventListener('click', () => {
-    switchToggle.classList.toggle('active');
+document.querySelectorAll('.switch').forEach(switchEl => {
+    switchEl.addEventListener('click', () => {
+        if (!switchEl.classList.contains('disabled')) {
+            switchEl.classList.toggle('active');
+        }
+    });
 }); 

@@ -20,12 +20,28 @@
     background-color: #19809A;
 }
 
+.switch.yellow.active {
+    background-color: #F8CC30;
+}
+
 .switch.blue {
     background-color: rgba(58, 47, 31, 0.1);
 }
 
 .switch.teal {
     background-color: rgba(58, 47, 31, 0.1);
+}
+
+.switch.yellow {
+    background-color: rgba(58, 47, 31, 0.1);
+}
+
+.switch.green {
+    background-color: rgba(58, 47, 31, 0.1);
+}
+
+.switch.green.active {
+    background-color: #039354;
 }
 
 .switch.disabled {

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segment control and switch showcase</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="segment.css">
+    <link rel="stylesheet" href="showcase.css">
+</head>
+<body>
+    <div class="showcase-container">
+        <h1>Segment control and switch showcase</h1>
+
+        <div class="component-section">
+            <h2>Segment Control (2 options)</h2>
+            <div class="controls-container" id="segment-2-options">
+                <div class="controls">
+                    <div class="segment active">
+                        <input type="radio" value="1" id="s2-1" name="segment-group-1" checked>
+                        <label for="s2-1">Label 1</label>
+                    </div>
+                    <div class="segment">
+                        <input type="radio" value="2" id="s2-2" name="segment-group-1">
+                        <label for="s2-2">Label 2</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="component-section">
+            <h2>Segment Control (2 options with tick)</h2>
+            <div class="controls-container" id="segment-2-tick">
+                 <div class="controls">
+                    <div class="segment active">
+                        <input type="radio" value="1" id="s2t-1" name="segment-group-2" checked>
+                        <label for="s2t-1"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Label 1</label>
+                    </div>
+                    <div class="segment">
+                        <input type="radio" value="2" id="s2t-2" name="segment-group-2">
+                        <label for="s2t-2">Label 2</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="component-section">
+            <h2>Segment Control (3 options)</h2>
+            <div class="controls-container" id="segment-3-options">
+                <div class="controls">
+                     <div class="segment active">
+                        <input type="radio" value="1" id="s3-1" name="segment-group-3" checked>
+                        <label for="s3-1">Label 1</label>
+                    </div>
+                    <div class="segment">
+                        <input type="radio" value="2" id="s3-2" name="segment-group-3">
+                        <label for="s3-2">Label 2</label>
+                    </div>
+                    <div class="segment">
+                        <input type="radio" value="3" id="s3-3" name="segment-group-3">
+                        <label for="s3-3">Label 3</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="component-section">
+            <h2>Segment Control (3 options with tick)</h2>
+            <div class="controls-container" id="segment-3-tick">
+                <div class="controls">
+                    <div class="segment active">
+                        <input type="radio" value="1" id="s3t-1" name="segment-group-4" checked>
+                        <label for="s3t-1"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Label 1</label>
+                    </div>
+                    <div class="segment">
+                        <input type="radio" value="2" id="s3t-2" name="segment-group-4">
+                        <label for="s3t-2">Label 2</label>
+                    </div>
+                    <div class="segment">
+                        <input type="radio" value="3" id="s3t-3" name="segment-group-4">
+                        <label for="s3t-3">Label 3</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="component-section">
+            <h2>Switch</h2>
+            <div class="switch green">
+                <div class="switch-handle"></div>
+            </div>
+        </div>
+
+        <div class="component-section">
+            <h2>Prototype Link</h2>
+            <a href="appointment.html" class="prototype-link">View Appointment Page</a>
+        </div>
+    </div>
+
+    <script src="segment.js"></script>
+    <script src="script.js"></script>
+    <script src="showcase.js"></script>
+</body>
+</html> 

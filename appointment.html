@@ -4,103 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book an Appointment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="appointment.css">
     <link rel="stylesheet" href="segment.css">
 </head>
 <body>
     <div class="page-container">
-        <header class="provider-header">
-            <img src="https://i.imgur.com/2s42aJ3.png" alt="Dr. MFATestP11, MD" class="provider-avatar">
-            <div class="provider-info">
-                <h1>Dr. MFATestP11, MD</h1>
-                <p>Primary Care Doctor</p>
-                <p>568 Broadway, 2nd Floor, New York, NY</p>
-            </div>
-        </header>
+        <a href="showcase.html" class="back-button">&larr; Back to Showcase</a>
+        <div class="booking-card">
+            <h2>Book an appointment for free</h2>
+            <p class="subheading">The office partners with Zocdoc to schedule appointments</p>
 
-        <nav class="main-tabs">
-            <a href="#" class="tab-item active">Highlights</a>
-            <a href="#" class="tab-item">Insurances</a>
-            <a href="#" class="tab-item">Locations</a>
-            <a href="#" class="tab-item">Reviews</a>
-            <a href="#" class="tab-item">FAQs</a>
-        </nav>
-
-        <main class="content-grid">
-            <div class="left-column">
-                <section class="info-card">
-                    <div class="card-icon calendar-icon"></div>
-                    <div>
-                        <h2>New patient appointments</h2>
-                        <p>Appointments available for new patients on Zocdoc</p>
-                    </div>
-                </section>
-                <section class="info-card">
-                    <div class="card-icon shield-icon"></div>
-                    <div>
-                        <h2>In-network insurances</h2>
-                        <p>Aetna, BlueCross BlueShield, Cigna, UnitedHealthcare, Oxford</p>
-                        <a href="#" class="more-plans-link">(200+) more in-network plans</a>
-                    </div>
-                </section>
+            <div class="form-group">
+                <label for="scheduling-details">Scheduling details</label>
+                <select id="scheduling-details" class="form-select">
+                    <option>Illness</option>
+                </select>
             </div>
 
-            <div class="right-column">
-                <div class="booking-card">
-                    <h2>Book an appointment for free</h2>
-                    <p class="subheading">The office partners with Zocdoc to schedule appointments</p>
+            <div class="info-banner insurance-banner">
+                <span>Aetna - <strong>Add plan</strong></span>
+            </div>
+            <div class="info-banner network-banner">
+                This doctor is in-network
+            </div>
 
-                    <div class="form-group">
-                        <label for="scheduling-details">Scheduling details</label>
-                        <select id="scheduling-details" class="form-select">
-                            <option>Illness</option>
-                        </select>
+            <div class="controls-container">
+                <div class="controls">
+                    <div class="segment active">
+                        <input type="radio" value="new" id="new-patient" name="patient-type" checked>
+                        <label for="new-patient">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            New patient
+                        </label>
                     </div>
-
-                    <div class="info-banner insurance-banner">
-                        <span>Aetna - <strong>Add plan</strong></span>
+                    <div class="segment">
+                        <input type="radio" value="existing" id="existing-patient" name="patient-type">
+                        <label for="existing-patient">Existing patient</label>
                     </div>
-                    <div class="info-banner network-banner">
-                        This doctor is in-network
-                    </div>
-
-                    <div class="controls-container">
-                        <div class="controls">
-                            <div class="segment active">
-                                <input type="radio" value="new" id="new-patient" name="patient-type" checked>
-                                <label for="new-patient">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                    New patient
-                                </label>
-                            </div>
-                            <div class="segment">
-                                <input type="radio" value="existing" id="existing-patient" name="patient-type">
-                                <label for="existing-patient">Existing patient</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                         <label for="practice-location">Available appointments</label>
-                        <select id="practice-location" class="form-select">
-                            <option>Test MFA_Practice_1</option>
-                        </select>
-                    </div>
-
-                    <div class="calendar-header">
-                        <p>Today, Jun 6 - Thu, Jun 19</p>
-                        <div class="calendar-nav">
-                            <span>&lt;</span>
-                            <span>&gt;</span>
-                        </div>
-                    </div>
-                    <div class="appointments-grid">
-                        <!-- Calendar items will be populated here -->
-                    </div>
-                     <a href="#" class="view-more-link">View more availability</a>
                 </div>
             </div>
-        </main>
+
+            <div class="form-group">
+                    <label for="practice-location">Available appointments</label>
+                <select id="practice-location" class="form-select">
+                    <option>Test MFA_Practice_1</option>
+                </select>
+            </div>
+
+            <div class="calendar-header">
+                <p>Today, Jun 6 - Thu, Jun 19</p>
+                <div class="calendar-nav">
+                    <span>&lt;</span>
+                    <span>&gt;</span>
+                </div>
+            </div>
+            <div class="appointments-grid">
+                <!-- Calendar items will be populated here -->
+            </div>
+                <a href="#" class="view-more-link">View more availability</a>
+        </div>
     </div>
     <script src="appointment.js"></script>
     <script src="segment.js"></script>

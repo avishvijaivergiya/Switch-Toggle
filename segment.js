@@ -1,33 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const controlsContainer = document.querySelector('.controls-container');
-    const controls = document.querySelector('.controls');
-    const segments = document.querySelectorAll('.segment');
-    const inputs = document.querySelectorAll('.segment input[type="radio"]');
+    // Find all segment control containers and initialize them
+    const allSegmentContainers = document.querySelectorAll('.controls-container');
 
-    function updateHighlight() {
-        const checkedInput = document.querySelector('.segment input[type="radio"]:checked');
-        if (!checkedInput) return;
+    allSegmentContainers.forEach(container => {
+        const controls = container.querySelector('.controls');
+        const segments = container.querySelectorAll('.segment');
+        const inputs = container.querySelectorAll('.segment input[type="radio"]');
 
-        const activeSegment = checkedInput.parentElement;
+        function updateHighlight() {
+            const checkedInput = container.querySelector('.segment input[type="radio"]:checked');
+            if (!checkedInput) return;
 
-        segments.forEach(segment => segment.classList.remove('active'));
-        activeSegment.classList.add('active');
+            const activeSegment = checkedInput.parentElement;
 
-        const { offsetWidth, offsetLeft } = activeSegment;
+            // Remove active class from siblings only
+            segments.forEach(segment => segment.classList.remove('active'));
+            activeSegment.classList.add('active');
 
-        controlsContainer.style.setProperty('--highlight-width', `${offsetWidth}px`);
-        controlsContainer.style.setProperty('--highlight-x-pos', `${offsetLeft}px`);
-    }
+            const { offsetWidth, offsetLeft } = activeSegment;
+            
+            // Set CSS variables on the specific container
+            container.style.setProperty('--highlight-width', `${offsetWidth}px`);
+            container.style.setProperty('--highlight-x-pos', `${offsetLeft}px`);
+        }
 
-    updateHighlight();
+        // Set initial state
+        updateHighlight();
 
-    setTimeout(() => {
-        controls.classList.add('ready');
-    }, 10);
+        // Add a 'ready' class after a short delay to enable transitions
+        setTimeout(() => {
+            if(controls) {
+               controls.classList.add('ready');
+            }
+        }, 10);
 
-    inputs.forEach(input => {
-        input.addEventListener('change', updateHighlight);
+        // Add event listeners for interaction
+        inputs.forEach(input => {
+            input.addEventListener('change', updateHighlight);
+        });
+
+        // Add event listener for resizing
+        window.addEventListener('resize', updateHighlight);
     });
-
-    window.addEventListener('resize', updateHighlight);
 }); 

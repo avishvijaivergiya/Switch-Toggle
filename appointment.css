@@ -1,7 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@font-face {
+    font-family: 'SharpSans';
+    src: url('font/SharpSansZocDoc-Medium_2128297593.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SharpSans';
+    src: url('font/SharpSansZocDoc-Semibold_2321215305.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SharpSans';
+    src: url('font/SharpSansZocDoc-Bold_2376822167.ttf') format('truetype');
+    font-weight: 700;
+}
 
 body {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'SharpSans', sans-serif !important;
     background-color: #f7f7f7;
     color: #333;
     margin: 0;
@@ -9,6 +25,8 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .page-container {
@@ -115,7 +133,7 @@ body {
 
 .booking-card h2 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .subheading {
@@ -145,7 +163,7 @@ body {
     padding: 12px;
     border-radius: 4px;
     margin-bottom: 16px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .insurance-banner {
@@ -224,7 +242,7 @@ body {
 }
 
 .day-cell .day-date {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
     margin: 4px 0;
 }
@@ -238,7 +256,7 @@ body {
     display: block;
     text-align: center;
     margin-top: 16px;
-    font-weight: 700;
+    font-weight: 600;
     color: #333;
     text-decoration: underline;
 }

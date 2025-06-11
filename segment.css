@@ -1,4 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@font-face {
+    font-family: 'SharpSans';
+    src: url('font/SharpSansZocDoc-Medium_2128297593.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SharpSans';
+    src: url('font/SharpSansZocDoc-Semibold_2321215305.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SharpSans';
+    src: url('font/SharpSansZocDoc-Bold_2376822167.ttf') format('truetype');
+    font-weight: 700;
+}
 
 body {
     margin: 0;
@@ -6,7 +22,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'SharpSans', sans-serif;
     background: #ffffff;
 }
 
@@ -68,15 +84,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
+  gap: 8px;
+  font-weight: 600;
   font-size: 16px;
   padding: 10px;
   position: relative;
   transition: color 0.5s ease;
   color: #333;
   user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .segment.active label {
   color: #333333;
+}
+
+.controls-container.has-tick .segment.active label::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.3334 4L6.00008 11.3333L2.66675 8' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
 } 

@@ -1,7 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@font-face {
+    font-family: 'SharpSans';
+    src: url('font/SharpSansZocDoc-Medium_2128297593.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SharpSans';
+    src: url('font/SharpSansZocDoc-Semibold_2321215305.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SharpSans';
+    src: url('font/SharpSansZocDoc-Bold_2376822167.ttf') format('truetype');
+    font-weight: 700;
+}
 
 body, .switch-label, .switch-table, .switch, .switch-handle {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'SharpSans', sans-serif;
 }
 
 .switch {
@@ -113,6 +129,9 @@ body, .switch-label, .switch-table, .switch, .switch-handle {
     color: #333;
     margin-bottom: 8px;
     display: block;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .switch-table {
@@ -143,7 +162,7 @@ body, .switch-label, .switch-table, .switch, .switch-handle {
 
 .switch-table th {
     background-color: #f5f5f5;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .demo-container {

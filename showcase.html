@@ -3,94 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segment control and switch showcase</title>
+    <title>Component Showcase</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="segment.css">
     <link rel="stylesheet" href="showcase.css">
 </head>
 <body>
     <div class="showcase-container">
-        <h1>Segment control and switch showcase</h1>
+        <h1>Component Showcase</h1>
 
+        <!-- 1. Original size with tick -->
         <div class="component-section">
-            <h2>Segment Control (2 options)</h2>
-            <div class="controls-container" id="segment-2-options">
+            <h2>Original Segment Control (with tick)</h2>
+            <div class="controls-container has-tick" id="segment-original-tick">
                 <div class="controls">
-                    <div class="segment active">
-                        <input type="radio" value="1" id="s2-1" name="segment-group-1" checked>
-                        <label for="s2-1">Label 1</label>
-                    </div>
-                    <div class="segment">
-                        <input type="radio" value="2" id="s2-2" name="segment-group-1">
-                        <label for="s2-2">Label 2</label>
-                    </div>
+                    <div class="segment active"><input type="radio" name="sg1" id="sg1-1" checked><label for="sg1-1">Label 1</label></div>
+                    <div class="segment"><input type="radio" name="sg1" id="sg1-2"><label for="sg1-2">Label 2</label></div>
                 </div>
             </div>
         </div>
 
+        <!-- 2. Original size without tick -->
         <div class="component-section">
-            <h2>Segment Control (2 options with tick)</h2>
-            <div class="controls-container has-tick" id="segment-2-tick">
-                 <div class="controls">
-                    <div class="segment active">
-                        <input type="radio" value="1" id="s2t-1" name="segment-group-2" checked>
-                        <label for="s2t-1">Label 1</label>
-                    </div>
-                    <div class="segment">
-                        <input type="radio" value="2" id="s2t-2" name="segment-group-2">
-                        <label for="s2t-2">Label 2</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="component-section">
-            <h2>Segment Control (3 options)</h2>
-            <div class="controls-container" id="segment-3-options">
+            <h2>Original Segment Control (no tick)</h2>
+            <div class="controls-container" id="segment-original-no-tick">
                 <div class="controls">
-                     <div class="segment active">
-                        <input type="radio" value="1" id="s3-1" name="segment-group-3" checked>
-                        <label for="s3-1">Label 1</label>
-                    </div>
-                    <div class="segment">
-                        <input type="radio" value="2" id="s3-2" name="segment-group-3">
-                        <label for="s3-2">Label 2</label>
-                    </div>
-                    <div class="segment">
-                        <input type="radio" value="3" id="s3-3" name="segment-group-3">
-                        <label for="s3-3">Label 3</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="component-section">
-            <h2>Segment Control (3 options with tick)</h2>
-            <div class="controls-container has-tick" id="segment-3-tick">
-                <div class="controls">
-                    <div class="segment active">
-                        <input type="radio" value="1" id="s3t-1" name="segment-group-4" checked>
-                        <label for="s3t-1">Label 1</label>
-                    </div>
-                    <div class="segment">
-                        <input type="radio" value="2" id="s3t-2" name="segment-group-4">
-                        <label for="s3t-2">Label 2</label>
-                    </div>
-                    <div class="segment">
-                        <input type="radio" value="3" id="s3t-3" name="segment-group-4">
-                        <label for="s3t-3">Label 3</label>
-                    </div>
+                    <div class="segment active"><input type="radio" name="sg2" id="sg2-1" checked><label for="sg2-1">Label 1</label></div>
+                    <div class="segment"><input type="radio" name="sg2" id="sg2-2"><label for="sg2-2">Label 2</label></div>
                 </div>
             </div>
         </div>
 
+        <!-- 3. Compact size with tick -->
         <div class="component-section">
-            <h2>Switch</h2>
+            <h2>Compact Segment Control (with tick)</h2>
+            <div class="controls-container compact has-tick" id="segment-compact-tick">
+                <div class="controls">
+                    <div class="segment active"><input type="radio" name="sg3" id="sg3-1" checked><label for="sg3-1">Label 1</label></div>
+                    <div class="segment"><input type="radio" name="sg3" id="sg3-2"><label for="sg3-2">Label 2</label></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Compact size without tick -->
+        <div class="component-section">
+            <h2>Compact Segment Control (no tick)</h2>
+            <div class="controls-container compact" id="segment-compact-no-tick">
+                <div class="controls">
+                    <div class="segment active"><input type="radio" name="sg4" id="sg4-1" checked><label for="sg4-1">Label 1</label></div>
+                    <div class="segment"><input type="radio" name="sg4" id="sg4-2"><label for="sg4-2">Label 2</label></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Switch Toggle -->
+        <div class="component-section">
+            <h2>Switch Toggle</h2>
             <div class="switch green">
                 <div class="switch-handle"></div>
             </div>
         </div>
 
+        <!-- 6. Prototype Link -->
         <div class="component-section">
             <h2>Prototype Link</h2>
             <a href="appointment.html" class="prototype-link">View Appointment Page</a>

@@ -61,6 +61,26 @@ h1 {
     margin-left: 16px;
 }
 
+.component-section .controls-container#segment-compact {
+    /* This empty rule is a placeholder to ensure the ID is targeted */
+}
+
+/* Apply compact styles only to the compact container */
+#segment-compact .controls {
+    height: 32px;
+}
+#segment-compact .segment label {
+    font-size: 14px;
+    padding: 8px 10px;
+}
+#segment-compact .segment {
+    min-width: 100px;
+}
+#segment-compact.has-tick .segment.active label::before {
+    width: 14px;
+    height: 14px;
+}
+
 .prototype-link {
     display: inline-block;
     padding: 12px 24px;
